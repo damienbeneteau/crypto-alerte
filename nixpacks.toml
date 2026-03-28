@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["python311"]
+nixPkgs = ["python311Full"]
 
 [start]
-cmd = "python crypto_alerte.py"
+cmd = "python3 crypto_alerte.py"
