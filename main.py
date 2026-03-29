@@ -8,8 +8,8 @@ from datetime import datetime
 
 # ============================================
 
-TELEGRAM_TOKEN = “8650440936: AAFRECgY1jDdeCU1d865Dc
-reWGGcgd9oaiu”  # Remplace par ton token BotFather
+TELEGRAM_TOKEN = “8650440936:AAGgeG3OPzL-
+mbvn9P7xS9EvNhAJZKChC_0”  # Remplace par ton token BotFather
 TELEGRAM_CHAT_ID = “6167991088”   # Ton Chat ID
 
 # ============================================
