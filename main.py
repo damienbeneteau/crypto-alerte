@@ -4,7 +4,8 @@ import os
 from datetime import datetime
 
 TELEGRAM_TOKEN = os.environ.get(“TELEGRAM_TOKEN”)
-TELEGRAM_CHAT_ID = “6167991088”
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
+
 
 SEUIL_HAUSSE_PRIX = 3.0
 INTERVALLE_SCAN = 30
