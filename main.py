@@ -8,8 +8,9 @@ from datetime import datetime
 
 # ============================================
 
-TELEGRAM_TOKEN = “8650440936:AAGgeG3OPzL-
-mbvn9P7xS9EvNhAJZKChC_0”  # Remplace par ton token BotFather
+import os
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+
 TELEGRAM_CHAT_ID = “6167991088”   # Ton Chat ID
 
 # ============================================
