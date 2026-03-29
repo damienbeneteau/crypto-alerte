@@ -9,7 +9,7 @@ from datetime import datetime
 # ============================================
 
 import os
-TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN"
 
 TELEGRAM_CHAT_ID = “6167991088”   # Ton Chat ID
 
