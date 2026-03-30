@@ -28,8 +28,11 @@ def envoyer_alerte(message):
 def scanner():
     global donnees_precedentes, alertes_envoyees
     try:
-        data = requests.get(BINANCE_URL, timeout=10).json()
-        paires = [d for d in data if d["symbol"].endswith("USDT")]
+        response = requests.get(BINANCE_URL, timeout=10)
+        data = response.json()
+        if not isinstance(data, list):
+            return
+        paires = [d for d in data if isinstance(d, dict) and d.get("symbol", "").endswith("USDT")]
         for crypto in paires:
             symbol = crypto["symbol"]
             prix = float(crypto["lastPrice"])
@@ -45,10 +48,3 @@ def scanner():
             donnees_precedentes[symbol] = prix
     except Exception as e:
         print("Erreur scanner : " + str(e))
-
-envoyer_alerte("Scanner Crypto demarre !")
-print("Scanner demarre !")
-while True:
-    scanner()
-    print("Scan... " + datetime.now().strftime("%H:%M:%S"))
-    time.sleep(INTERVALLE_SCAN)
