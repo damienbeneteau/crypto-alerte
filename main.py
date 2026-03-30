@@ -1,8 +1,8 @@
 import requests
 import time
 from datetime import datetime
-
-TOKEN = "8650440936:AAEsruZDi8bcFlCcj_WCVEaVbYpjKhSSmG4"
+import os
+TOKEN = os.environ.get("TELEGRAM_TOKEN")
 CHAT = "6167991088"
 
 SEUIL_HAUSSE_PRIX = 3.0
@@ -14,6 +14,7 @@ alertes_envoyees = {}
 
 def envoyer_alerte(message):
     url = "https://api.telegram.org/bot" + TOKEN + "/sendMessage"
+
     payload = {
         "chat_id":CHAT,
         "text": message,
