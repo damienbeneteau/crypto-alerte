@@ -2,7 +2,7 @@ import requests
 import time
 from datetime import datetime
 
-TOKEN = "8650440936"
+TOKEN = "8650440936:AAFf95sqPgbq0Dzw4_SA_mNYrDUF0dH7eo4"
 CHAT = "6167991088"
 
 SEUIL_HAUSSE_PRIX = 3.0
@@ -15,7 +15,7 @@ alertes_envoyees = {}
 def envoyer_alerte(message):
     url = "https://api.telegram.org/bot" + TELEGRAM_TOKEN + "/sendMessage"
     payload = {
-        "chat_id": TELEGRAM_CHAT_ID,
+        "chat_id":CHAT,
         "text": message,
         "parse_mode": "HTML"
     }
