@@ -2,7 +2,7 @@ import requests
 import time
 from datetime import datetime
 
-TOKEN = "8650440936:AAFf95sqPgbq0Dzw4_SA_mNYrDUF0dH7eo4"
+TOKEN = "8650440936"
 CHAT = "6167991088"
 
 SEUIL_HAUSSE_PRIX = 3.0
