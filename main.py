@@ -3,7 +3,7 @@ import time
 import os
 from datetime import datetime
 
-TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 TELEGRAM_CHAT_ID = "6167991088"
 
 SEUIL_HAUSSE_PRIX = 3.0
