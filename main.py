@@ -13,7 +13,7 @@ donnees_precedentes = {}
 alertes_envoyees = {}
 
 def envoyer_alerte(message):
-    url = "https://api.telegram.org/bot" + TELEGRAM_TOKEN + "/sendMessage"
+    url = "https://api.telegram.org/bot" + TOKEN + "/sendMessage"
     payload = {
         "chat_id":CHAT,
         "text": message,
