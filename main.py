@@ -9,7 +9,7 @@ CHAT = "6167991088"
 SEUIL_HAUSSE_PRIX = 0.1    # % de hausse pour déclencher une alerte
 INTERVALLE_SCAN = 30        # secondes entre chaque scan
 COOLDOWN_ALERTE = 300       # secondes minimum entre deux alertes pour un même symbole
-BINANCE_URL = "https://api.binance.com/api/v3/ticker/24hr"
+BINANCE_URL = "https://api.binance.us/api/v3/ticker/24hr"
 
 # ─── État global ──────────────────────────────────────────────────
 donnees_precedentes = {}    # { symbol: prix_précédent }
