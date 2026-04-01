@@ -97,6 +97,7 @@ def scanner():
 # ─── Boucle principale ────────────────────────────────────────────
 if __name__ == "__main__":
     log("Bot de détection de pompes démarré.")
+    envoyer_alerte("✅ Bot démarré et connecté à Telegram.")
     while True:
         scanner()
         time.sleep(INTERVALLE_SCAN)
