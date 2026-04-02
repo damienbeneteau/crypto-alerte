@@ -81,7 +81,7 @@ def scanner():
                     message = (
                         f"🚀 <b>Pompe détectée : {symbol}</b>\n"
                         f"+{round(hausse, 2)}% en {INTERVALLE_SCAN}s\n"
-                        f"Prix : {prix} USDT"
+                        f"Prix : {prix} USDC"
                     )
                     envoyer_alerte(message)
                     alertes_envoyees[symbol] = maintenant
