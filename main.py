@@ -51,14 +51,14 @@ def scanner():
             log("Réponse Binance inattendue (pas une liste).")
             return
 
-        paires_usdt = [
+        paires_usdc = [
             d for d in data
-            if isinstance(d, dict) and d.get("symbol", "").endswith("USDT")
+            if isinstance(d, dict) and d.get("symbol", "").endswith("USDC")
         ]
 
         maintenant = time.time()
 
-        for crypto in paires_usdt:
+        for crypto in paires_usdc:
             symbol = crypto.get("symbol")
             try:
                 prix = float(crypto["lastPrice"])
