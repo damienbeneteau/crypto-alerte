@@ -6,7 +6,7 @@ import os
 # ─── Configuration ────────────────────────────────────────────────
 TOKEN = os.environ.get("TELEGRAM_TOKEN")
 CHAT = "6167991088"
-SEUIL_HAUSSE_PRIX = 0.5    # % de hausse pour déclencher une alerte
+SEUIL_HAUSSE_PRIX = 1.5    # % de hausse pour déclencher une alerte
 INTERVALLE_SCAN = 30        # secondes entre chaque scan
 COOLDOWN_ALERTE = 300       # secondes minimum entre deux alertes pour un même symbole
 BINANCE_URL = "https://api.binance.us/api/v3/ticker/24hr"
@@ -51,9 +51,9 @@ def scanner():
             log("Réponse Binance inattendue (pas une liste).")
             return
 
-        paires_usdc = [
+        paires_usdt = [
             d for d in data
-            if isinstance(d, dict) and d.get("symbol", "").endswith("USDC")
+            if isinstance(d, dict) and d.get("symbol", "").endswith("USDT")
         ]
 
         maintenant = time.time()
@@ -81,7 +81,7 @@ def scanner():
                     message = (
                         f"🚀 <b>Pompe détectée : {symbol}</b>\n"
                         f"+{round(hausse, 2)}% en {INTERVALLE_SCAN}s\n"
-                        f"Prix : {prix} USDC"
+                        f"Prix : {prix} USDT"
                     )
                     envoyer_alerte(message)
                     alertes_envoyees[symbol] = maintenant
